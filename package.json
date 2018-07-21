@@ -1,6 +1,6 @@
 {
 	"name": "resource-pipe-js",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A tiny library that loads external scripts and styles sequentially (without any external dependencies)",
 	"main": "pipe.js",
 	"scripts": {
