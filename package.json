@@ -1,0 +1,23 @@
+{
+	"name": "pipejs",
+	"version": "1.0.0",
+	"description": "A tiny library that loads external scripts and styles sequentially (without any external dependencies)",
+	"main": "pipe.js",
+	"scripts": {
+		"test": "echo \"Please use browser to view test/test.html\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JCloudYu/pipejs.git"
+	},
+	"keywords": [
+		"pipe",
+		"pipe-js"
+	],
+	"author": "JCloudYu",
+	"license": "WTFPL",
+	"bugs": {
+		"url": "https://github.com/JCloudYu/pipejs/issues"
+	},
+	"homepage": "https://github.com/JCloudYu/pipejs#readme"
+}
