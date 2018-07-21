@@ -18,7 +18,8 @@ Or you can download the script from [here](https://cdn.rawgit.com/JCloudYu/pipej
 This library registers a function named ```pipe``` onto the ```window``` object. It's the sole function the developer should know to load resources. The ```pipe``` api accept an array of ``` resource descriptors```. 
 
 ### Resource Descriptor ###
-Resource descriptors is an object contains following properties
+Resource descriptors is an object contains following properties:
+
 | name | type | required | default | description |
 |:----------|:-----:|:---:|:----:|:--------------|
 | path | String | Y |  | The path of the external resource |
