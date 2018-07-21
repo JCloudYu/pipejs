@@ -50,34 +50,31 @@ A function can also be a sequence separator. A separator function will be guarat
 
 ```javascript
 await pipe([
-	'http://code.jquery.com/jquery-3.3.1.min.js',
-    
-	()=>{
+    'http://code.jquery.com/jquery-3.3.1.min.js',    
+    ()=>{
         console.log( "Jquery is loaded!" );
         console.log( "From now on, the jQuery is guaranteed to be available!" );
-	},
+    },
     
-	{ path:'http://momentjs.com/downloads/moment.min.js', cache:false },
-    
+    { path:'http://momentjs.com/downloads/moment.min.js', cache:false },
     // This script will be failed but the whole loading process will not be stopped!
 	{ path:'http://momentjs.com/downloads/moment222.min.js', cache:false, important:false },
 
     //A separator the guarantee the super-fast.js is loaded after the load of moment.min.js and pump2.min.js
     null,
-	
-	'./super-fast.js'
-)
+    
+    './super-fast.js'
+])
 // The promise returned by the pipe api will contain a pipe method
 // This allows developers to chain up the load process
 .pipe([
-	{ path:'./super-slow.js', modulize:true, cache:true, overwrites:{}},
-	{ type:'css', path:'./style.css' },
-	{ type:'css', path:'./style2.css', important:false },
+    { path:'./super-slow.js', modulize:true, cache:true, overwrites:{}},
+    { type:'css', path:'./style.css' },
+    { type:'css', path:'./style2.css', important:false },
 	
-	// The following line will make the reading process stopped and the promise returned will be rejected!
-//  { type:'css', path:'http://momentjs.com/downloads/moment222.min.js' },
-
-	{ type:'css', path:'./style-final.css' }
+    // The following line will make the reading process stopped and the promise returned will be rejected!
+    //{ type:'css', path:'http://momentjs.com/downloads/moment222.min.js' },
+    { type:'css', path:'./style-final.css' }
 ]);
 
 console.log( "Everything is done! Now you can use anything freely!" );
